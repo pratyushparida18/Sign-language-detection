@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Read</h1>
+        <img src="{{ url_for('static',filename='/EAT.gif') }}" alt="">
+        <p>Make the sign for eat by taking your dominant hand, forming a flat ASL letter O sign, and tapping your fingers to your mouth once. To sign food, make the same handshape but tap your fingers to your mouth twice. This universal sign for eating is the same sign used for food. The only difference is that verbs are signed once, and nouns are signed twice.</p>
+    </div>
+</body>
+</html>
+
+<style>
+
+.container{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    color: white;
+}
+img{
+    width: 50%;
+    height: 50%;
+}
+body {
+    background-color: rgb(18, 51, 66);
+  }
+</style>

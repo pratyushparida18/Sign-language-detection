@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Read</h1>
+        <img src="{{ url_for('static',filename='/FAST.gif') }}" alt="">
+        <p>Fast looks like you are putting away a pair of six-shooters in a cowboy movie. You start with your hands in a fist, with the index fingers and thumbs extended, like forming the 'L' sign horizontally, as if to shoot a gun from both hands. Then pull both hands back toward your torso with your index fingers curling inward at the same time.</p>
+    </div>
+</body>
+</html>
+
+<style>
+
+.container{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    color: white;
+}
+img{
+    width: 50%;
+    height: 50%;
+}
+body {
+    background-color: rgb(18, 51, 66);
+  }
+</style>

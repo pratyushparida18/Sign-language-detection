@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Read</h1>
+        <img src="{{ url_for('static',filename='/Read.gif') }}" alt="">
+        <p>To sign read, hold up your non-dominant hand flat, palm facing you, then take your dominant hand and form it into the ASL letter 'V' sign. Then point the two fingers of your 'V' hand from top to bottom of your open palm, as if the fingers are your two eyes scanning the page, and the palm is your book.</p>
+    </div>
+</body>
+</html>
+
+
+<style>
+
+.container{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    color: white;
+}
+img{
+    width: 50%;
+    height: 50%;
+}
+body {
+    background-color: rgb(18, 51, 66);
+  }
+</style>

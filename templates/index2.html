@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div id="center" class="col-lg-8  offset-lg-2">
+        <center>
+          <h1 class="mt-5">Click here to use our AI powered ASL detection model!</h1>
+          <img id="video" src="" width="100%">
+          <button type="button" class="btn btn-primary" onclick="toggleVideo()">Click here</button>
+        </center>
+      </div>
+    </div>
+   <h2><u>Some popular sign languages</u></h2>
+    <div class="row container1" >
+      <div class="col col1 " >
+        <img
+          src="{{ url_for('static',filename='images/read.png') }}"
+          alt="" onclick="link1()">
+        <p>READ</p>
+      </div>
+      <div class="col col1 ">
+        <img
+          src="{{ url_for('static',filename='images/fast.png') }}"
+          alt="" onclick="link2()">
+        <p>FAST</p>
+      </div>
+      <div class="col col1 ">
+        <img
+        src="{{ url_for('static',filename='images/eat.png') }}"
+        alt="" onclick="link3()">
+        <p>EAT</p>
+      </div>
+    </div>
+    <div class="row container1 ">
+      <div class="col col1 ">
+        <img
+        src="{{ url_for('static',filename='images/more.png') }}"
+        alt="" onclick="link4()">
+        <p>MORE</p>
+      </div>
+      <div class="col col1 ">
+        <img
+        src="{{ url_for('static',filename='images/father.png') }}"
+        alt="" onclick="link5()">
+        <p>FATHER</p>
+      </div>
+      <div class="col col1 ">
+        <img
+        src="{{ url_for('static',filename='images/mother.png') }}"
+        alt="" onclick="link6()">
+        <p>MOTHER</p>
+      </div>
+
+      
+</body>
+
+<!----------------- JavaScript ------------------>
+
+
+<script>
+  let flag = true;
+
+  function toggleVideo() {
+    var image = document.getElementById('video');
+
+    if (flag === false) {
+      image.src = "";
+      console.log("close video");
+      flag = !flag;
+    }
+    else {
+      image.src = "{{ url_for('video_feed') }}";
+      flag = !flag
+    }
+  }
+
+  function link1(){
+    //   var gif1=document.getElementsByClassName("col1");
+    //   x.src="C:\Users\Pratyush Parida\sign language detection\images\32783-A_1_1350x1800.jpg";
+    location.href = "{{ url_for('template_display1') }}";
+  }
+  function link2(){
+    location.href = "{{ url_for('template_display2') }}";
+  }
+  function link3(){
+    location.href = "{{ url_for('template_display3') }}";
+  }
+  function link4(){
+    location.href = "{{ url_for('template_display4') }}";
+  }
+  function link5(){
+    location.href = "{{ url_for('template_display5') }}";
+  }
+  function link6(){
+    location.href = "{{ url_for('template_display6') }}";
+  }
+</script>
+
+<!----------------- CSS -------------------->
+<style>
+  body {
+    background-color: rgb(18, 51, 66);
+  }
+
+  h1,h2 {
+    color: white;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 6vh;
+  }
+
+  center button {
+    margin-bottom: 10vh;
+  }
+
+  .container1 {
+    margin-bottom: 2vh;
+    /* margin-top: 10vh; */
+    /* padding: 2.5vw; */
+    /* background-color: aqua; */
+
+  }
+
+  .col1 {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 1vw;
+    /* padding: 1vw; */
+    /* background-color: blueviolet; */
+  }
+
+  .col1 p {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 2vh;
+  }
+
+  .col1 img {
+    height: 100%;
+    width: 90%;
+    /* border: none; */
+    border-radius: 2vw;
+    cursor: pointer;
+    transition: all 1.3s;
+  }
+
+  .col1 img:hover {
+    /* width: 73%; */
+    box-shadow: 1.5px 1.5px 1.5px 5px rgb(34, 34, 34);
+    transform: scaleX(1.15) scaleY(1.1);
+  }
+</style>
+
+</html>
